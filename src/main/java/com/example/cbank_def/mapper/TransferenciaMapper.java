@@ -1,27 +1,23 @@
 package com.example.cbank_def.mapper;
 
 import com.example.cbank_def.domain.Transferencia;
-import com.example.cbank_def.domain.TransferenciaDTO;
+import com.example.cbank_def.dto.TransferenciaDTO;
 
 import java.util.List;
 
 public class TransferenciaMapper {
 
-    public static Transferencia dtoToDomain(TransferenciaDTO TransferenciaDTO){
+    public static Transferencia dtoToDomain(TransferenciaDTO transferenciaDTO){
         return Transferencia.builder()
-                .id(TransferenciaDTO.getId())
-                .tipo_transferencia(TransferenciaDTO.getTipo_transferencia())
-                .cuentaOrigen(TransferenciaDTO.getCuentaOrigen())
-                .cuentaDestino(TransferenciaDTO.getCuentaDestino())
+                .id(transferenciaDTO.getId())
+                .tipo_transferencia(transferenciaDTO.getTipo_transferencia())
                 .build();
     }
 
-    public static TransferenciaDTO domainToDto(Transferencia Transferencia){
+    public static TransferenciaDTO domainToDto(Transferencia transferencia){
         return TransferenciaDTO.builder()
-                .id(Transferencia.getId())
-                .tipo_transferencia(Transferencia.getTipo_transferencia())
-                .cuentaOrigen(Transferencia.getCuentaOrigen())
-                .cuentaDestino(Transferencia.getCuentaDestino())
+                .id(transferencia.getId())
+                .tipo_transferencia(transferencia.getTipo_transferencia())
                 .build();
     }
 
