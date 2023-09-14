@@ -1,6 +1,5 @@
 package com.example.cbank_def.dto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,8 +13,6 @@ public class UsuarioDTO {
 
     private Integer id;
 
-    private String nombre;
-
     private String apellido;
 
     private String cedula;
@@ -25,4 +22,5 @@ public class UsuarioDTO {
     private String correo;
 
     private Integer cuentaId;
+
 }

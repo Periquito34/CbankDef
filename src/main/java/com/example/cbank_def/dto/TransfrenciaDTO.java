@@ -1,6 +1,5 @@
 package com.example.cbank_def.dto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,13 +9,13 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BolsilloDTO {
+public class TransfrenciaDTO {
 
     private Integer id;
 
-    private float dinero;
+    private String tipo_transferencia;
 
-    private String nombreBolsillo;
+    private Integer cuentaOrigenId;
 
-    private Integer cuentaId;
+    private Integer cuentaDestinoId;
 }
