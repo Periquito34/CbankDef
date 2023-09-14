@@ -1,4 +1,4 @@
-package com.example.cbank_def.domain.repository;
+package com.example.cbank_def.repository;
 
 import com.example.cbank_def.domain.Transferencia;
 import org.springframework.data.jpa.repository.JpaRepository;
