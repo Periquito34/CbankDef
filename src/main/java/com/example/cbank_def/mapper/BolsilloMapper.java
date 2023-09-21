@@ -7,20 +7,18 @@ import java.util.List;
 
 public class BolsilloMapper {
 
-    public static Bolsillo dtoToDomain(BolsilloDTO BolsilloDTO) {
+    public static Bolsillo dtoToDomain(BolsilloDTO bolsilloDTO){
         return Bolsillo.builder()
-                .id(BolsilloDTO.getId())
-                .dinero(BolsilloDTO.getDinero())
-                .nombreBolsillo(BolsilloDTO.getNombreBolsillo())
-
+                .id(bolsilloDTO.getId())
+                .dinero(bolsilloDTO.getDinero())
+                .nombreBolsillo(bolsilloDTO.getNombreBolsillo())
                 .build();
     }
-    public static BolsilloDTO domainToDto(Bolsillo Bolsillo){
+    public static BolsilloDTO domainToDto(Bolsillo bolsillo){
         return BolsilloDTO.builder()
-                .id(Bolsillo.getId())
-                .dinero(Bolsillo.getDinero())
-                .nombreBolsillo(Bolsillo.getNombreBolsillo())
-                .cuentaId(Bolsillo.getCuenta())
+                .id(bolsillo.getId())
+                .dinero(bolsillo.getDinero())
+                .nombreBolsillo(bolsillo.getNombreBolsillo())
                 .build();
     }
 

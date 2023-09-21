@@ -1,32 +1,30 @@
 package com.example.cbank_def.mapper;
 
 import com.example.cbank_def.domain.Usuario;
-import com.example.cbank_def.domain.UsuarioDTO;
+import com.example.cbank_def.dto.UsuarioDTO;
 
 import java.util.List;
 
 public class UsuarioMapper {
-    public static Usuario dtoToDomain(UsuarioDTO UsuarioDTO){
+    public static Usuario dtoToDomain(UsuarioDTO usuarioDTO){
         return Usuario.builder()
-                .id(UsuarioDTO.getId())
-                .nombre(UsuarioDTO.getNombre())
-                .apellido(UsuarioDTO.getApellido())
-                .cedula(UsuarioDTO.getCedula())
-                .telefono(UsuarioDTO.getTelefono())
-                .correo(UsuarioDTO.getCorreo())
-                .cuenta(UsuarioDTO.getCuenta())
+                .id(usuarioDTO.getId())
+                .nombre(usuarioDTO.getNombre())
+                .apellido(usuarioDTO.getApellido())
+                .cedula(usuarioDTO.getCedula())
+                .telefono(usuarioDTO.getTelefono())
+                .correo(usuarioDTO.getCorreo())
                 .build();
     }
 
-    public static UsuarioDTO domainToDto(Usuario Usuario){
+    public static UsuarioDTO domainToDto(Usuario usuario){
         return UsuarioDTO.builder()
-                .id(Usuario.getId())
-                .nombre(Usuario.getNombre())
-                .apellido(Usuario.getApellido())
-                .cedula(Usuario.getCedula())
-                .telefono(Usuario.getTelefono())
-                .correo(Usuario.getCorreo())
-                .cuenta(Usuario.getCuenta())
+                .id(usuario.getId())
+                .nombre(usuario.getNombre())
+                .apellido(usuario.getApellido())
+                .cedula(usuario.getCedula())
+                .telefono(usuario.getTelefono())
+                .correo(usuario.getCorreo())
                 .build();
     }
 
