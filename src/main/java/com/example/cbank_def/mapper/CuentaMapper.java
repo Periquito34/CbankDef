@@ -1,7 +1,6 @@
 package com.example.cbank_def.mapper;
 
 import com.example.cbank_def.domain.Cuenta;
-import com.example.cbank_def.domain.CuentaDTO;
 
 
 import java.util.List;

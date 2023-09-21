@@ -33,3 +33,4 @@ public class TransferenciaMapper {
         return Transferencias.stream().map(TransferenciaMapper::domainToDto).toList();
     }
 }
+

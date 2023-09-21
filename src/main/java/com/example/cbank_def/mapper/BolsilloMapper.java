@@ -1,18 +1,18 @@
 package com.example.cbank_def.mapper;
 
 import com.example.cbank_def.domain.Bolsillo;
-import com.example.cbank_def.domain.BolsilloDTO;
+import com.example.cbank_def.dto.BolsilloDTO;
 
 import java.util.List;
 
 public class BolsilloMapper {
 
-    public static Bolsillo dtoToDomain(BolsilloDTO BolsilloDTO){
+    public static Bolsillo dtoToDomain(BolsilloDTO BolsilloDTO) {
         return Bolsillo.builder()
                 .id(BolsilloDTO.getId())
                 .dinero(BolsilloDTO.getDinero())
                 .nombreBolsillo(BolsilloDTO.getNombreBolsillo())
-                .cuenta(BolsilloDTO.getCuenta())
+
                 .build();
     }
     public static BolsilloDTO domainToDto(Bolsillo Bolsillo){
@@ -20,7 +20,7 @@ public class BolsilloMapper {
                 .id(Bolsillo.getId())
                 .dinero(Bolsillo.getDinero())
                 .nombreBolsillo(Bolsillo.getNombreBolsillo())
-                .cuenta(Bolsillo.getCuenta())
+                .cuentaId(Bolsillo.getCuenta())
                 .build();
     }
 
