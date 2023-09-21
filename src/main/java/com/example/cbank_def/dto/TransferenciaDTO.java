@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransfrenciaDTO {
+public class TransferenciaDTO {
 
     private Integer id;
 
