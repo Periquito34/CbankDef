@@ -6,5 +6,5 @@ public interface UsuarioService {
 
     List<UsuarioDTO> obtenerusuario();
 
-    UsuarioDTO registraUsuario(UsuarioDTO usuarioDTO) throws Exception;
+    UsuarioDTO guardarUsuario(UsuarioDTO usuarioDTO) throws Exception;
 }
