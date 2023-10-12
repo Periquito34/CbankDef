@@ -29,12 +29,12 @@ public class UsuarioController {
     }
 
     @GetMapping("/porId/{id}")
-    public ResponseEntity<Usuario> buscarPorId(@PathVariable Integer id) throws Exception{
+    public ResponseEntity<UsuarioDTO> buscarPorId(@PathVariable Integer id) throws Exception{
         Usuario usuario = usuarioRepository.getReferenceById(id);
 
         UsuarioDTO usuarioDTO = UsuarioMapper.domainToDto(usuario);
 
-        return new ResponseEntity<>(usuario, HttpStatus.OK);
+        return new ResponseEntity<>(usuarioDTO, HttpStatus.OK);
     }
 
 }

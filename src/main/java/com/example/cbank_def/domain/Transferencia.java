@@ -21,7 +21,7 @@ public class Transferencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(name = "tipo_transferencia")
     private String tipo_transferencia;
 
     @ManyToOne

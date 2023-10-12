@@ -33,12 +33,12 @@ public class CuentaController {
     }
 
     @GetMapping("/porId/{id}")
-    public ResponseEntity<Cuenta> buscarPorId(@PathVariable Integer id) throws Exception{
+    public ResponseEntity<CuentaDTO> buscarPorId(@PathVariable Integer id) throws Exception{
         Cuenta cuenta = cuentaRepository.getReferenceById(id);
 
         CuentaDTO cuentaDTO = CuentaMapper.domainToDto(cuenta);
 
-        return new ResponseEntity<>(cuenta, HttpStatus.OK);
+        return new ResponseEntity<>(cuentaDTO, HttpStatus.OK);
     }
 
 }

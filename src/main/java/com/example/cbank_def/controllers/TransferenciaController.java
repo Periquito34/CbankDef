@@ -32,12 +32,12 @@ public class TransferenciaController {
     }
 
     @GetMapping("/porId/{id}")
-    public ResponseEntity<Transferencia> buscarPorId(@PathVariable Integer id) throws Exception{
+    public ResponseEntity<TransferenciaDTO> buscarPorId(@PathVariable Integer id) throws Exception{
         Transferencia transferencia = transferenciaRepository.getReferenceById(id);
 
         TransferenciaDTO transferenciaDTO = TransferenciaMapper.domainToDto(transferencia);
 
-        return new ResponseEntity<>(transferencia, HttpStatus.OK);
+        return new ResponseEntity<>(transferenciaDTO, HttpStatus.OK);
     }
 
     }

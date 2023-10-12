@@ -32,12 +32,12 @@ public class BolsilloController {
     }
 
     @GetMapping("/porId/{id}")
-    public ResponseEntity<Bolsillo> buscarPorId(@PathVariable Integer id) throws Exception{
+    public ResponseEntity<BolsilloDTO> buscarPorId(@PathVariable Integer id) throws Exception{
         Bolsillo bolsillo = bolsilloRepository.getReferenceById(id);
 
         BolsilloDTO bolsilloDTO = BolsilloMapper.domainToDto(bolsillo);
 
-        return new ResponseEntity<>(bolsillo, HttpStatus.OK);
+        return new ResponseEntity<>(bolsilloDTO, HttpStatus.OK);
     }
 
 }
