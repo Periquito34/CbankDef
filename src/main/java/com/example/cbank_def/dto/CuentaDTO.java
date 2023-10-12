@@ -13,7 +13,7 @@ public class CuentaDTO {
 
     private Integer id;
 
-    private String saldo;
+    private float saldo;
 
     private String pin;
 }
