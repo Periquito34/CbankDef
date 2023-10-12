@@ -22,7 +22,7 @@ public class Cuenta {
     private Integer id;
 
     @Column(nullable = false, length = 30, name="saldo")
-    private String saldo;
+    private Float saldo;
 
     @Column(nullable = false, length = 30, name="pin")
     private String pin;
